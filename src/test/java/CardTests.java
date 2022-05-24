@@ -15,8 +15,6 @@ public class CardTests {
         $x("//span[@class='button__text']").click();
 
         Thread.sleep(10000);
-        boolean actualResult = $x("//div[@data-test-id='notification']").isDisplayed();
-
-        assertTrue(actualResult);
+        $x("//div[@data-test-id='notification']").shouldBe(Condition.visible);
     }
 }
